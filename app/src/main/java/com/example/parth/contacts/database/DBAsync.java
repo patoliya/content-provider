@@ -13,7 +13,7 @@ import android.util.Log;
 /**
  *  this provides async data from database, It also has
  */
-public class DB {
+public class DBAsync {
 
     private static final int LOADER_ID = 1;
 
@@ -46,5 +46,7 @@ public class DB {
         });
 
     }
+
+
 
 }

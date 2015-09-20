@@ -9,7 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.parth.contacts.database.AsyncDatabase;
-import com.example.parth.contacts.database.DB;
+import com.example.parth.contacts.database.DBAsync;
 import com.example.parth.contacts.database.DatabaseDAO;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         String insertedAt = databaseDAO.insertFakeContact();
         Log.d("parth", insertedAt);
 
-        DB.getRegisteredContacts(this, new AsyncDatabase() {
+        DBAsync.getRegisteredContacts(this, new AsyncDatabase() {
             @Override
             public void runAfterQuering(Cursor data) {
                 Log.d("parth", DatabaseUtils.dumpCursorToString(data));
